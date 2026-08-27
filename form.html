@@ -28,18 +28,50 @@
 
         <table border="2">
             <tr>
-           <th><h1>Solicitação de Cancelamento</h1></th>
+                <th>
+                    <h1>Solicitação de Cancelamento</h1>
+                </th>
             </tr>
             <form action="db.html" method="get" name="card">
-                <th></th><label>Dominio:<input type="e-mail" name="e-mail" id="e-mail" placeholder="seudominio.com"></label></form></th><br>
-                <td></td><label>Pessoa responsavel por esta solicitação:<input type="text" name="text" id="text"></label></td> <br>
-                <label>RG Numero:<input type="number" name="RG" id="RG"></label><br>
-                <label>Expedito por:<input type="text" name="RG" id="RG"></label><br>
-                <label>Informe o seu e-mail:<input type="email" name="email" id="email"
-                        placeholder="digite seu e-mail"></label> <br>
-                <label>Telefone de Contato:<input type="number" name="telefone" id="telefone"></label><br>
-                <label>Motivo de cancelamento:<input type="text" name="RG" id="RG"></label><br>
-                <input type="submit" value="Enviar dados"><br>
+                <th></th><label>Dominio:<input type="e-mail" name="e-mail" id="e-mail"
+                        placeholder="seudominio.com"></label>
+            </form>
+            </th><br>
+            <td></td><label>Pessoa responsavel por esta solicitação:<input type="text" name="text" id="text"></label>
+            </td> <br>
+            <label>RG Numero:<input type="number" name="RG" id="RG"></label><br>
+            <label>Expedito por:<input type="text" name="RG" id="RG"></label><br>
+            <label>Informe o seu e-mail:<input type="email" name="email" id="email"
+                    placeholder="digite seu e-mail"></label> <br>
+            <label>Telefone de Contato:<input type="number" name="telefone" id="telefone"></label><br>
+            <label>Motivo de cancelamento:<input type="text" name="RG" id="RG"></label><br>
+            <input type="submit" value="Enviar dados"><br>
+
+            <b>qual o seu tranporte primario</b><br>
+            <label>1<input type="radio" name="transporte" id="transporte" value="carro" />Carro </label> <br>
+            <label>2<input type="radio" name="transporte" id="transporte" value="moto" />Moto </label> <br>
+            <label>3<input type="radio" name="transporte" id="transporte" value="nadando" />Barco </label> <br>
+
+            <b>qual o seu tranporte primario</b><br>
+            <label><input type="checkbox" name="bus" id="bus" value="onibus">ônibus</label> <br>
+            <label><input type="checkbox" name="aviao" id="aviao" value="aviao">aviao</label> <br>
+            <label><input type="checkbox" name="Barco id=" Barco value="Barco">Barco</label> <br>
+
+            <b>informe o seu estado</b><br>
+            <label for="estado">informe o seu estado:</label>
+            <select name="estado">
+                <option value="PE" />PERNAMBUCO
+                <option value="ba" selected />bahia
+                <option value="PB" />PARAIBA
+                <option value="PA" />PARANA
+            </select><br>
+
+            <b>Observação</b><br>
+            <textarea cols="30" rows="10">oi</textarea>
+
+            <br>
+            <input type="reset" value="Limpa"> <br> <br>
+            <input type="submit" value="enviar"> <br>
         </table>
     </form>
 
