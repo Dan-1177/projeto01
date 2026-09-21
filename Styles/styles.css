@@ -1,0 +1,32 @@
+/* commit css document*/
+
+
+h1 {
+    color: rgb(209, 24, 43);
+    font-size: 50px;
+}
+
+h2{
+    font-size: 20px;
+    color: red;
+}
+p{
+    margin-left: 50px;
+}
+
+body {
+    background-color: wheat;
+    background-image: url(../icon/giphy.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 4px 40px;
+    padding left: 50px;
+}
+
+a.hover{
+    color:blueviolet
+}
+
+li.nOrdenada {
+    
+}
