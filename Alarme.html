@@ -8,11 +8,12 @@
 </head>
 
 <body>
-    <audio id="sound" src="Alarm.mp3" style="display: nome;"></audio>
+    <audio id="sound" src="icon/Alarm.mp3" style="display: nome: 3030px;;></audio>
 
     <div class="container">
         <h2>Minutos:</h2>
         <select id="minutos" name="minutos"></select>
+
         <h2>Segundos</h2>
         <select id="segundos" name="segundos"></select>
         <br />
@@ -39,11 +40,11 @@
         var interval;
 
         for (var i = 0; i <= 59; i++) {
-            minutos.innerHTML += '<option value=" ' + i + '">' + i + '<option>';
+            minutos.innerHTML += '<option value=" ' + i + '">' + i + '</option>';
         }
 
         for (var i = 0; i <= 59; i++) {
-            segundoAtual.innerHTML += '<option value="' + i + '">' + i + '<option>';
+            segundos.innerHTML += '<option value="' + i + '">' + i + '</option>';
         }
 
         comecar.addEventListener('click', function () {
@@ -53,28 +54,26 @@
             display.childNodes[1].innerHTML = minutoAtual + ":" + segundoAtual;
 
             interval = setInterval(function () {
-                segundoAtual--;
-                if (segundoAtual <= 0) {
-                    if (minutoAtual > 0) {
-                        minutoAtual--;
-                        segundoAtual = 59;
-
-                    }
-                    else {
-                        document.getElementById("sound").play();
-                        alert("Deligar Alarme!");
-                        clearInterval(interval);
-                        location.reload();
-                    }
+            segundoAtual--;
+            if (segundoAtual <= 0) {
+                if (minutoAtual > 0) {
+                    minutoAtual--;
+                    segundoAtual = 59;
 
                 }
+                else {
+                    document.getElementById("sound").play();
+                    alert("Deligar Alarme!");
+                    clearInterval(interval);
+                    location.reload();
+                }
 
-                display.childNodes[1].innerHTML = minutoAtual + ":" + segundoAtual;
-            }.1000);
+            }
 
-            interval = setinterval(function ())
-        }
-}
+            display.childNodes[1].innerHTML = minutoAtual + ":" + segundoAtual;
+        },1000);
+    }
+
 
     </script>
 </body>
