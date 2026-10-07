@@ -1,25 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <audio id="sound" src="Alarm.mp3" syle="display: nome;"></audio>"
+    <audio id="sound" src="Alarm.mp3" style="display: nome;"></audio>
 
     <div class="container">
-        <h2>minutos:</h2>
+        <h2>Minutos:</h2>
         <select id="minutos" name="minutos"></select>
         <h2>Segundos</h2>
         <select id="segundos" name="segundos"></select>
-        <br/>
-        <br/>
-        <button id="comecar">COMEÇAR!</button>
+        <br />
+        <br />
+        <button id="comecar">Começar!</button>
 
         <div id="display">
             <h3></h3>
-            </div> <!--display-->
+        </div> <!--display-->
     </div> <!--container-->
+    <script>
+        var display = document.getElementById('display');
+
+        var minutos = document.getElementById('minutos');
+        var segundos = document.getElementById('segundos');
+
+        var comecar = document.getElementById('comecar');
+
+        var cronometroSeg;
+
+        var minutoAtual;
+        var segundoAtual;
+
+        var interval;
+
+        for (var i = 0; i <= 59; i++) {
+            minutos.innerHTML += '<option value=" ' + i + '">' + i + '<option>';
+        }
+
+        for (var i = 0; i <= 59; i++) {
+            segundoAtual.innerHTML += '<option value="' + i + '">' + i + '<option>';
+        }
+
+        comecar.addEventListener('click', function () {
+            minutoAtual = minutos.value;
+            segundoAtual = segundos.value;
+
+            display.childNodes[1].innerHTML = minutoAtual + ":" + segundoAtual;
+
+            interval = setInterval(function () {
+                segundoAtual--;
+                if (segundoAtual <= 0) {
+                    if (minutoAtual > 0) {
+                        minutoAtual--;
+                        segundoAtual = 59;
+
+                    }
+                    else {
+                        document.getElementById("sound").play();
+                        alert("Deligar Alarme!");
+                        clearInterval(interval);
+                        location.reload();
+                    }
+
+                }
+
+                display.childNodes[1].innerHTML = minutoAtual + ":" + segundoAtual;
+            }.1000);
+
+            interval = setinterval(function ())
+        }
+}
+
+    </script>
 </body>
+
 </html>
