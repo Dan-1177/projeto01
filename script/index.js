@@ -48,9 +48,6 @@ comecar.addEventListener('click', function () {
         }
 
         display.childNodes[1].innerHTML = minutoAtual + ":" + segundoAtual;
-    }.1000);
-
-    interval = setinterval(function ())
+    },1000);
 }
-}
-
+);
